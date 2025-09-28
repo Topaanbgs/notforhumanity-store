@@ -111,9 +111,7 @@ export default function Wishlist() {
 
       <div className={`fixed top-0 right-0 w-full sm:w-[480px] h-screen bg-white shadow-lg z-50 flex flex-col transform transition-transform duration-300 ${isWishlistOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex justify-between items-center p-4 border-b">
-          <h1 className="text-xl font-bold flex items-center gap-2">
-            <FaHeart className="text-red-600" /> Wishlist ({wishlist.length})
-          </h1>
+          <h1 className="text-xl font-bold flex items-center gap-2">Wishlist</h1>
           <button onClick={closeWishlist} className="text-gray-500 hover:text-gray-800">
             <FaTimes size={20} />
           </button>
