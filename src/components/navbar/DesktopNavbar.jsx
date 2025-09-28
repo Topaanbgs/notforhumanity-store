@@ -3,8 +3,9 @@ import { Link, useLocation, useNavigate, useSearchParams } from "react-router-do
 import Dropdown from "./Dropdown";
 import { useCart } from "../../context/CartContext";
 import { useWishlist } from "../../context/WishlistContext";
-import { slugify } from "../../utils/Slugify";
 import { useSearch } from "../../context/SearchContext";
+import { useAuth } from "../../context/AuthContext";
+import { slugify } from "../../utils/Slugify";
 
 export default function DesktopNavbar({
   marqueeRef,
@@ -31,10 +32,11 @@ export default function DesktopNavbar({
   handleDropdownToggle,
   handleSave,
 }) {
-  // Cart, wishlist, and search context
+  // Cart, wishlist, search and auth context
   const { openCart, cart } = useCart();
   const { openWishlist, wishlist } = useWishlist();
   const { query, setQuery } = useSearch();
+  const { user } = useAuth();
 
   const [searchText, setSearchText] = useState(query || "");
   const location = useLocation();
@@ -154,11 +156,19 @@ export default function DesktopNavbar({
           </button>
 
           {/* Profile */}
-          <Link to="/profile" className="hover:text-red-600" aria-label="Profile">
-            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </Link>
+          {user ? (
+            <Link to={user.email.endsWith("@nfhmn.staff.com") ? "/admin/profile" : "/profile"} className="hover:text-red-600" aria-label="Profile">
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </Link>
+          ) : (
+            <Link to="/signin" className="hover:text-red-600" aria-label="Sign In">
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </Link>
+          )}
         </div>
       </div>
 
