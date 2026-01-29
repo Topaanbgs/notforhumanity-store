@@ -1,12 +1,54 @@
-# React + Vite
+# 🛍️ Notforhumanity Store - Modern E-Commerce Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Notforhumanity Store** adalah aplikasi e-commerce *full-featured* yang dibangun dengan **React Vite**. Proyek ini dirancang untuk memberikan pengalaman belanja digital yang mulus, mulai dari penelusuran katalog produk hingga proses checkout yang terintegrasi.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🌍 [notforhumanity-store.vercel.app](https://notforhumanity-store.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+- **Product Catalog:** Antarmuka katalog produk yang dinamis dengan kategori dan detail produk yang mendalam.
+- **Persistent Shopping Cart:** Sistem keranjang belanja yang mendukung penambahan, pengurangan, dan penghapusan item secara real-time.
+- **Seamless Checkout Flow:** Alur pembayaran yang terstruktur untuk menjamin *User Experience* (UX) yang optimal.
+- **Admin Dashboard:** Panel kontrol khusus untuk manajemen stok barang dan pemantauan transaksi (Opsional - *sesuaikan jika ada*).
+- **Optimized Assets:** Penggunaan CDN untuk loading gambar dan aset yang cepat serta efisien.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** [React.js](https://react.dev)
+- **Build Tool:** [Vite](https://vitejs.dev)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **State Management:** React Hooks / Context API
+- **Deployment:** Vercel
+
+---
+
+## 📦 Project Structure Highlights
+Proyek ini mengimplementasikan prinsip-prinsip pengembangan modern:
+- **Component-Based Architecture:** Kode yang modular dan dapat digunakan kembali (reusable components).
+- **Responsive Web Design:** Tampilan yang dioptimalkan untuk berbagai ukuran layar (Mobile, Tablet, Desktop).
+- **HMR (Hot Module Replacement):** Pengalaman pengembangan yang cepat berkat ekosistem Vite.
+
+---
+
+## ⚙️ How to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/Topaanbgs/notforhumanity-store.git](https://github.com/Topaanbgs/notforhumanity-store.git)
+   cd notforhumanity-store
+Install Dependencies
+
+Bash
+npm install
+Start Development Server
+
+Bash
+npm run dev
+Developed by Topan Bagus Prasetyo
